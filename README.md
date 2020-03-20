@@ -1,4 +1,4 @@
-# COVID-19 Visualisation
+# Visualisation of Corona virus - COVID19
 still in progress...
 
 
@@ -7,9 +7,10 @@ still in progress...
 
 ## Tutorial
 
-1. Download file
+1. Download file from **Novel Corona virus - COVID19**
+https://github.com/datasets/covid-19
 
-2. Lunch converter
+2. Lunch converter 
 ~~~
 Usage: converter {input} {output}
 ~~~
