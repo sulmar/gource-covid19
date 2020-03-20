@@ -1,6 +1,4 @@
 # Visualisation of Corona virus - COVID19
-still in progress...
-
 
 ![Image of COVID19](2020-03-20_18h15_00.png)
 
@@ -23,3 +21,7 @@ gource covid.log -s 0.2
 
 ## Docs
 https://github.com/acaudwell/Gource/wiki/Custom-Log-Format
+
+
+## Status
+Project is still in progress...
