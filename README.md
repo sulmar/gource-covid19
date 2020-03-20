@@ -8,7 +8,7 @@
 Usage: converter {input} {output}
 ~~~
 
-3. Lunch gource
+3. Lunch gource 
 
 ~~~ bash
 gource covid.log -s 0.2
