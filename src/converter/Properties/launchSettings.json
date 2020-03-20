@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "converter": {
+      "commandName": "Project",
+      "commandLineArgs": "time-series-19-covid-combined.csv covid.log"
+    }
+  }
+}
