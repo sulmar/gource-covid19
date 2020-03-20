@@ -18,14 +18,22 @@ namespace converter.Services
 
         public void Add(Observation observation)
         {
+            if (observation.Confirmed == 0 && observation.Deaths == 0)
+                return;
+
             var unixtime = new DateTimeOffset(observation.Timestamp).ToUnixTimeSeconds();
 
             string path = observation.Country;
 
+            string color = "FF0000";
+
+            File.AppendAllText(filename, $"{unixtime}|Covid19|A|{path}|{color}\n");
+
             if (!string.IsNullOrEmpty(observation.Province))
                 path += $"/{observation.Province}";
-
-            File.AppendAllText(filename, $"{unixtime}|Covid19|A|{path}|FF0000\n");
+            
+            File.AppendAllText(filename, $"{unixtime}|Covid19|A|{path}|{color}\n");
+            
         }
     }
 }

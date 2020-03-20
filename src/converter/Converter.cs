@@ -15,7 +15,6 @@ namespace converter
             this.observationService = observationService;
             this.logService = logService;
             this.progress = progress;
-
         }
 
         public void Convert()
@@ -30,27 +29,6 @@ namespace converter
             }
 
         }
-
-        //private IEnumerable<Observation> Get(string input)
-        //{
-        //    var tokenizer = new RFC4180Tokenizer(new Options('"', '\\', ','));
-
-        //    CsvParserOptions csvParserOptions = new CsvParserOptions(true, tokenizer);
-        //    CsvObservationMapping csvMapper = new CsvObservationMapping();
-        //    CsvParser<Observation> csvParser = new CsvParser<Observation>(csvParserOptions, csvMapper);
-
-        //    var result = csvParser
-        //        .ReadFromFile(input, Encoding.ASCII)
-        //        .ToList()
-        //        .Where(d => d.IsValid)
-        //        .Select(d => d.Result)
-        //        .OrderBy(p => p.Timestamp);
-
-
-        //    return result;
-        //}
-
-
 
     }
 }
