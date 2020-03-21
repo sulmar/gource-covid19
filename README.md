@@ -1,6 +1,6 @@
 # Visualisation of Corona virus - COVID19
 
-![Image of COVID19](2020-03-20_18h15_00.png)
+![Image of COVID19](gource-covid19.png)
 
 
 ## Tutorial
