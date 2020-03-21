@@ -5,15 +5,12 @@
 
 ## Tutorial
 
-1. Download file from **Novel Corona virus - COVID19**
-https://github.com/datasets/covid-19
-
-2. Lunch converter 
+1. Lunch converter 
 ~~~
-Usage: converter {input} {output}
+Usage: converter covid.log
 ~~~
 
-3. Lunch gource 
+2. Lunch gource 
 
 ~~~ bash
 gource covid.log -s 0.2
