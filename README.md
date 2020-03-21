@@ -10,6 +10,10 @@
 Usage: converter covid.log
 ~~~
 
+The application will download data automatically from:
+- COVID-19 https://raw.githubusercontent.com/datasets/covid-19/master/time-series-19-covid-combined.csv
+- Continents https://raw.githubusercontent.com/dbouquin/IS_608/master/NanosatDB_munging/Countries-Continents.csv
+            
 2. Lunch gource 
 
 ~~~ bash
