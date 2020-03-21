@@ -12,12 +12,11 @@ namespace converter.Models
         public int Confirmed { get; set; }
         public int Recovered { get; set; }
         public int Deaths { get; set; }
+        public string Continent { get; set; }
 
         public override string ToString()
         {
             return $"{Province} {Country} {Timestamp} {Confirmed} {Recovered} {Deaths}";
         }
-
-
     }
 }

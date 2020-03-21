@@ -3,9 +3,9 @@ using TinyCsvParser.Mapping;
 
 namespace converter
 {
-    partial class CsvObservationMapping : CsvMapping<Observation>
+    public class ObservationCsvMapping : CsvMapping<Observation>
     {
-        public CsvObservationMapping()
+        public ObservationCsvMapping()
             : base()
         {
             MapProperty(0, x => x.Province);
@@ -18,4 +18,5 @@ namespace converter
             MapProperty(7, x => x.Deaths);
         }
     }
+
 }

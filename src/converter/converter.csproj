@@ -6,16 +6,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="time-series-19-covid-combined.csv" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Content Include="time-series-19-covid-combined.csv">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="TinyCsvParser" Version="3.0.0-alpha1" />
   </ItemGroup>
 

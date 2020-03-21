@@ -1,12 +1,11 @@
 ﻿using converter.IServices;
 using converter.Models;
 using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Text;
 
 namespace converter.Services
 {
+
     public class GourceFileLogService : ILogService
     {
         private readonly string filename;
@@ -23,16 +22,28 @@ namespace converter.Services
 
             var unixtime = new DateTimeOffset(observation.Timestamp).ToUnixTimeSeconds();
 
-            string path = observation.Country;
+            string path = observation.Continent;
 
             string color = "FF0000";
 
-            File.AppendAllText(filename, $"{unixtime}|Covid19|A|{path}|{color}\n");
+            string author = observation.Continent;
+
+            string content = $"{unixtime}|{author}|A|{path}|{color}\n";
+
+            File.AppendAllText(filename, content);
+
+            path += $"/{observation.Country}";
+
+            content = $"{unixtime}|{author}|A|{path}|{color}\n";
+
+            File.AppendAllText(filename, content);
 
             if (!string.IsNullOrEmpty(observation.Province))
                 path += $"/{observation.Province}";
-            
-            File.AppendAllText(filename, $"{unixtime}|Covid19|A|{path}|{color}\n");
+
+            content = $"{unixtime}|{author}|A|{path}|{color}\n";
+
+            File.AppendAllText(filename, content);
             
         }
     }

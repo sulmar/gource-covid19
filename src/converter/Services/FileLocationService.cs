@@ -1,5 +1,6 @@
 ﻿using converter.IServices;
 using converter.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,38 +9,38 @@ using TinyCsvParser.Tokenizer.RFC4180;
 
 namespace converter.Services
 {
-    // dotnet add package TinyCsvParser
-    public class UrlObservationService : IObservationService
+    public class UrlLocationService : ILocationService
     {
-        private readonly string filename;
+        private readonly string url;
 
-        public UrlObservationService(string filename)
+        public UrlLocationService(string url)
         {
-            this.filename = filename;
+            this.url = url;
         }
 
-        public IEnumerable<Observation> Get()
+        public IEnumerable<Location> Get()
         {
-            return Get(filename);
+            return Get(url);
         }
 
-        private IEnumerable<Observation> Get(string url)
+        private IEnumerable<Location> Get(string url)
         {
             var tokenizer = new RFC4180Tokenizer(new Options('"', '\\', ','));
 
             CsvParserOptions csvParserOptions = new CsvParserOptions(true, tokenizer);
-            ObservationCsvMapping csvMapper = new ObservationCsvMapping();
-            CsvParser<Observation> csvParser = new CsvParser<Observation>(csvParserOptions, csvMapper);
+            LocationCsvMapping csvMapper = new LocationCsvMapping();
+            CsvParser<Location> csvParser = new CsvParser<Location>(csvParserOptions, csvMapper);
             CsvReaderOptions csvReaderOptions = new CsvReaderOptions("\n");
 
             var result = csvParser
                 .ReadFromUrl(csvReaderOptions, url)
                 .ToList()
                 .Where(d => d.IsValid)
-                .Select(d => d.Result)
-                .OrderBy(p => p.Timestamp);
+                .Select(d => d.Result);
 
             return result;
         }
     }
+
+   
 }
