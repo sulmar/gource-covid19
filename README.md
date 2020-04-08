@@ -24,5 +24,5 @@ gource covid.log -s 0.2
 https://github.com/acaudwell/Gource/wiki/Custom-Log-Format
 
 
-## Status
-Project is still in progress...
+## Future
+Instead of parsing CSV data I'm going to switch to COVID19 API https://covid19api.com/
